@@ -1,0 +1,68 @@
+{
+  "name": "@grikomsn/style-guide",
+  "description": "Personal style guide for various projects 🤙",
+  "version": "0.0.1",
+  "author": "Griko Nibras <git@griko.id>",
+  "repository": "https://github.com/grikomsn/style-guide",
+  "homepage": "https://github.com/grikomsn/style-guide",
+  "bugs": "https://github.com/grikomsn/style-guide/issues",
+  "files": [
+    "eslint/**/*.js",
+    "prettier/**/*.js",
+    "*.json"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint --fix \"**/*.js\""
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "^7",
+    "@rushstack/eslint-patch": "^1",
+    "@typescript-eslint/eslint-plugin": "^5",
+    "@typescript-eslint/parser": "^5",
+    "eslint-config-prettier": "^8",
+    "eslint-import-resolver-alias": "^1",
+    "eslint-import-resolver-typescript": "^3",
+    "eslint-plugin-eslint-comments": "^3",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-prettier": "^4",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^4",
+    "eslint-plugin-simple-import-sort": "^7",
+    "eslint-plugin-tsdoc": "^0",
+    "eslint-plugin-unicorn": "^43",
+    "eslint-plugin-unused-imports": "^2"
+  },
+  "peerDependencies": {
+    "eslint": "^8",
+    "prettier": "^2",
+    "typescript": "^4"
+  },
+  "optionalDependencies": {
+    "@next/eslint-plugin-next": "^12",
+    "eslint-plugin-jest": "^26",
+    "eslint-plugin-tailwindcss": "^3",
+    "eslint-plugin-testing-library": "^5"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/prettier": "^2",
+    "eslint": "^8",
+    "prettier": "^2",
+    "typescript": "^4"
+  },
+  "keywords": [
+    "eslint-config",
+    "eslint",
+    "prettier-config",
+    "prettier",
+    "style-guide",
+    "tsconfig"
+  ],
+  "eslintConfig": {
+    "extends": "./eslint/eslint",
+    "root": true
+  },
+  "prettier": "./prettier",
+  "license": "MPL"
+}

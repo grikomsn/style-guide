@@ -1,0 +1,10 @@
+.DS_Store
+.env*
+.vercel/
+*.log
+node_modules/
+package-lock.json
+yarn.lock
+
+!.env.example
+!.gitkeep
