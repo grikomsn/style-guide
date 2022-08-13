@@ -59,6 +59,9 @@
     "style-guide",
     "tsconfig"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "eslintConfig": {
     "extends": "./eslint/eslint",
     "root": true
