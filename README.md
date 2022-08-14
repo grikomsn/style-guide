@@ -1,5 +1,9 @@
 # @grikomsn/style-guide
 
+![version](https://badgen.net/npm/v/@grikomsn/style-guide)
+![downloads](https://badgen.net/npm/dt/@grikomsn/style-guide)
+![license](https://badgen.net/npm/license/@grikomsn/style-guide)
+
 Personal style guide for various projects, which includes configs for popular linting and styling tools. Heavily based on [Vercel's style guide](https://github.com/vercel/style-guide).
 
 The following configs are available, and are designed to be used together.
@@ -7,6 +11,8 @@ The following configs are available, and are designed to be used together.
 - [Prettier](#prettier)
 - [ESLint](#eslint)
 - [TypeScript](#typescript)
+
+---
 
 ## Installing
 
@@ -53,7 +59,7 @@ The following optional configs are available:
 - `@grikomsn/style-guide/eslint/next` (requires `@grikomsn/style-guide/eslint/react`)
 - `@grikomsn/style-guide/eslint/react`
 - `@grikomsn/style-guide/eslint/tailwindcss` (requires installing [`eslint-plugin-tailwindcss`](https://www.npmjs.com/package/eslint-plugin-tailwindcss))
-- `@grikomsn/style-guide/eslint/typescript`
+- `@grikomsn/style-guide/eslint/typescript` (requires [additional configuration](#configuring-eslint-for-typescript))
 
 > You'll need to use `require.resolve` to provide ESLint with absolute paths,
 > due to an issue around ESLint config resolution (see
@@ -69,6 +75,37 @@ module.exports = {
     require.resolve("@grikomsn/style-guide/eslint/react"),
     require.resolve("@grikomsn/style-guide/eslint/next"),
   ],
+};
+```
+
+### Configuring ESLint for TypeScript
+
+Some of the rules enabled in the TypeScript config require additional type
+information, you'll need to provide the path to your `tsconfig.json`.
+
+For more information, see: https://typescript-eslint.io/docs/linting/type-linting
+
+```js
+const { getTsconfigPath } = require("@grikomsn/style-guide/eslint/helpers");
+
+const tsconfigPath = getTsconfigPath();
+
+module.exports = {
+  extends: [
+    require.resolve("@grikomsn/style-guide/eslint/node"),
+    require.resolve("@grikomsn/style-guide/eslint/typescript"),
+  ],
+  parserOptions: {
+    project: tsconfigPath,
+  },
+  settings: {
+    "import/resolver": {
+      typescript: {
+        project: tsconfigPath,
+      },
+    },
+  },
+  root: true,
 };
 ```
 
