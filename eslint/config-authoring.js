@@ -5,7 +5,7 @@ const config = {
   extends: require.resolve("./node"),
   overrides: [
     {
-      files: ["eslint/rules/**"],
+      files: ["eslint/rules/**", "prettier/**"],
       rules: {
         "sort-keys": "error",
       },

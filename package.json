@@ -64,7 +64,7 @@
     "access": "public"
   },
   "eslintConfig": {
-    "extends": "./eslint/eslint",
+    "extends": "./eslint/config-authoring",
     "root": true
   },
   "prettier": "./prettier",
