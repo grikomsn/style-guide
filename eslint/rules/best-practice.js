@@ -11,6 +11,7 @@ const config = {
     "grouped-accessor-pairs": ["error"],
     "no-alert": ["error"],
     "no-caller": ["error"],
+    "no-constant-binary-expression": ["error"],
     "no-constructor-return": ["error"],
     "no-else-return": ["warn"],
     "no-eval": ["error"],
