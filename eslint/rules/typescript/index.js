@@ -28,6 +28,7 @@ const config = {
     "@typescript-eslint/no-extraneous-class": ["error"],
     "@typescript-eslint/no-invalid-void-type": ["error"],
     "@typescript-eslint/no-meaningless-void-operator": ["error"],
+    "@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: { arguments: false, attributes: true } }],
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": ["warn"],
     "@typescript-eslint/no-unnecessary-condition": ["warn"],
     "@typescript-eslint/no-unnecessary-qualifier": ["warn"],
