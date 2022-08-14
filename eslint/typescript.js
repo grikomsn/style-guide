@@ -1,16 +1,9 @@
 // @ts-check
 
-const fs = require("fs");
-const path = require("path");
-
 const { TYPESCRIPT_FILES } = require("./constants");
+const { getTsconfigPath } = require("./helpers");
 
-// eslint-disable-next-line no-nested-ternary
-const tsConfig = fs.existsSync("tsconfig.json")
-  ? path.resolve("tsconfig.json")
-  : fs.existsSync("types/tsconfig.json")
-  ? path.resolve("types/tsconfig.json")
-  : undefined;
+const project = getTsconfigPath();
 
 /** @type {import("eslint").Linter.Config} */
 const config = {
@@ -29,12 +22,12 @@ const config = {
         require.resolve("./rules/tsdoc"),
       ],
       parserOptions: {
-        project: tsConfig,
+        project,
       },
       settings: {
         "import/resolver": {
           typescript: {
-            project: tsConfig,
+            project,
           },
         },
       },
