@@ -160,6 +160,11 @@ To use the shared TypeScript config, set the following in `tsconfig.json`.
 }
 ```
 
+The following optional configs are available:
+
+- `@grikomsn/style-guide/tsconfig` (same as `@grikomsn/style-guide`)
+- `@grikomsn/style-guide/tsconfig/next` (for Next.js projects)
+
 ## Acknowledgements
 
 - https://github.com/vercel/style-guide
