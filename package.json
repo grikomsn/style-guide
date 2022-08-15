@@ -9,6 +9,7 @@
   "files": [
     "eslint/**/*.js",
     "prettier/**/*.js",
+    "tsconfig/*.json",
     "*.json"
   ],
   "sideEffects": false,
