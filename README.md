@@ -4,7 +4,7 @@
 ![downloads](https://badgen.net/npm/dt/@grikomsn/style-guide)
 ![license](https://badgen.net/npm/license/@grikomsn/style-guide)
 
-Personal style guide for various projects, which includes configs for popular linting and styling tools. Heavily based on [Vercel's style guide](https://github.com/vercel/style-guide).
+ESLint and Prettier style guide for various personal projects, which includes configs for popular linting and styling tools. Heavily based on [Vercel's style guide](https://github.com/vercel/style-guide).
 
 The following configs are available, and are designed to be used together.
 

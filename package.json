@@ -1,6 +1,6 @@
 {
   "name": "@grikomsn/style-guide",
-  "description": "Personal style guide for various projects 🤙",
+  "description": "ESLint and Prettier style guide for various personal projects 🤙",
   "version": "0.0.6",
   "author": "Griko Nibras <git@griko.id>",
   "repository": "https://github.com/grikomsn/style-guide",
