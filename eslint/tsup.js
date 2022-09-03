@@ -1,10 +1,12 @@
 // @ts-check
 
+const { TSUP_FILES } = require("./constants");
+
 /** @type {import("eslint").Linter.Config} */
 const config = {
   overrides: [
     {
-      files: ["tsup.config.{js,cjs,mjs,ts}"],
+      files: TSUP_FILES,
       rules: {
         "import/no-default-export": ["off"],
       },
