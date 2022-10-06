@@ -38,7 +38,7 @@ const config = {
     "no-useless-call": ["error"],
     "no-useless-concat": ["error"],
     "no-useless-return": ["warn"],
-    "prefer-named-capture-group": ["error"],
+    "prefer-named-capture-group": ["warn"],
     "prefer-promise-reject-errors": ["error", { allowEmptyReject: true }],
     "prefer-regex-literals": ["error"],
     yoda: ["warn"],
