@@ -1,7 +1,7 @@
 {
   "name": "@grikomsn/style-guide",
   "description": "ESLint and Prettier style guide for various personal projects 🤙",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Griko Nibras <git@griko.id>",
   "repository": "https://github.com/grikomsn/style-guide",
   "homepage": "https://github.com/grikomsn/style-guide",
@@ -17,6 +17,7 @@
     "lint": "eslint --fix \"**/*.js\""
   },
   "dependencies": {
+    "@babel/core": "^7",
     "@babel/eslint-parser": "^7",
     "@rushstack/eslint-patch": "^1",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -27,12 +28,13 @@
     "eslint-plugin-eslint-comments": "^3",
     "eslint-plugin-import": "^2",
     "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-prefer-arrow-functions": "^3",
     "eslint-plugin-prettier": "^4",
     "eslint-plugin-react": "^7",
     "eslint-plugin-react-hooks": "^4",
-    "eslint-plugin-simple-import-sort": "^7",
+    "eslint-plugin-simple-import-sort": "^8",
     "eslint-plugin-tsdoc": "^0",
-    "eslint-plugin-unicorn": "^43",
+    "eslint-plugin-unicorn": "^44",
     "eslint-plugin-unused-imports": "^2"
   },
   "peerDependencies": {
@@ -41,8 +43,8 @@
     "typescript": "^4"
   },
   "optionalDependencies": {
-    "@next/eslint-plugin-next": "^12",
-    "eslint-plugin-jest": "^26",
+    "@next/eslint-plugin-next": "*",
+    "eslint-plugin-jest": "^27",
     "eslint-plugin-tailwindcss": "^3",
     "eslint-plugin-testing-library": "^5"
   },

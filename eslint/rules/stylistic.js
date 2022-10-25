@@ -2,6 +2,7 @@
 
 /** @type {import("eslint").Linter.Config} */
 const config = {
+  plugins: ["prefer-arrow-functions"],
   rules: {
     camelcase: ["error", { allow: ["^UNSAFE_"], ignoreDestructuring: false, properties: "never" }],
     "func-names": ["error", "as-needed"],
@@ -13,6 +14,10 @@ const config = {
     "no-multi-assign": ["error"],
     "no-nested-ternary": ["error"],
     "no-unneeded-ternary": ["error"],
+    "prefer-arrow-functions/prefer-arrow-functions": [
+      "warn",
+      { classPropertiesAllowed: false, disallowPrototype: false, returnStyle: "unchanged", singleReturnOnly: false },
+    ],
     "prefer-object-spread": ["warn"],
   },
 };

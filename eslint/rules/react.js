@@ -4,7 +4,7 @@
 const config = {
   rules: {
     "react/button-has-type": ["warn"],
-    "react/function-component-definition": ["warn"],
+    "react/function-component-definition": ["warn", { namedComponents: "arrow-function" }],
     "react/jsx-boolean-value": ["warn"],
     "react/jsx-curly-brace-presence": ["warn"],
     "react/jsx-fragments": ["warn"],
