@@ -9,6 +9,7 @@ const config = {
       files: TSUP_FILES,
       rules: {
         "import/no-default-export": ["off"],
+        "import/prefer-default-export": ["error"],
       },
     },
   ],
