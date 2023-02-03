@@ -1,7 +1,9 @@
+// @ts-check
+
 const fs = require("fs");
 const path = require("path");
 
-function getTsconfigPath() {
+const getTsconfigPath = () => {
   const assumePath = path.resolve(process.cwd(), "tsconfig.json");
   const assumeTypesPath = path.resolve(process.cwd(), "types/tsconfig.json");
 
@@ -13,7 +15,7 @@ function getTsconfigPath() {
     : undefined;
 
   return tsConfig;
-}
+};
 
 module.exports = {
   getTsconfigPath,

@@ -1,6 +1,9 @@
 // @ts-check
 
 const { JAVASCRIPT_FILES } = require("./constants");
+const { requirePackage } = require("./utils/package-manager");
+
+requirePackage("next", "@next/eslint-plugin-next");
 
 const babelOptions = {
   presets: (() => {
@@ -15,11 +18,7 @@ const babelOptions = {
 
 /** @type {import("eslint").Linter.Config} */
 const config = {
-  extends: [
-    "plugin:@next/next/core-web-vitals",
-    require.resolve("./rules/next/import"),
-    require.resolve("./rules/next/jsx-a11y"),
-  ],
+  extends: ["plugin:@next/next/recommended"],
   overrides: [
     {
       files: JAVASCRIPT_FILES,

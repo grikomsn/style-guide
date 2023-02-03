@@ -24,8 +24,11 @@ npm install --save-dev @grikomsn/style-guide
 yarn add --dev @grikomsn/style-guide
 
 # using pnpm
-pnpm add --dev @grikomsn/style-guide
+pnpm install --save-dev @grikomsn/style-guide
 ```
+
+Some of our ESLint configs require peer dependencies. We'll note those
+alongside the available configs in the [ESLint](#eslint) section.
 
 ## Prettier
 
@@ -49,17 +52,25 @@ To use the shared Prettier config, set the following in `package.json`.
 >
 > See: https://eslint.org/docs/user-guide/getting-started#installation-and-usage
 
-This ESLint config is designed to be composable. The base configs,
-`@grikomsn/style-guide/eslint/node` or `@grikomsn/style-guide/eslint/browser`, set
-up a project for JavaScript and should always be first in `extends`.
+This ESLint config is designed to be composable.
 
-The following optional configs are available:
+The following base configs are available. You can use one or both of these
+configs, but they should always be first in `extends`:
 
-- `@grikomsn/style-guide/eslint/jest` (requires installing [`eslint-plugin-jest`](https://www.npmjs.com/package/eslint-plugin-jest) and [`eslint-plugin-testing-library`](https://www.npmjs.com/package/eslint-plugin-testing-library))
-- `@grikomsn/style-guide/eslint/next` (requires `@grikomsn/style-guide/eslint/react`)
+- `@grikomsn/style-guide/eslint/browser`
+- `@grikomsn/style-guide/eslint/node`
+
+Note that you can scope configs, so that configs only target specific files.
+For more information, see: [Scoped configuration with `overrides`](#scoped-configuration-with-overrides).
+
+The following additional configs are available:
+
+- `@grikomsn/style-guide/eslint/jest` (requires [`eslint-plugin-jest`](https://npm.im/eslint-plugin-jest) and [`eslint-plugin-testing-library`](https://npm.im/eslint-plugin-testing-library) to be installed)
+- `@grikomsn/style-guide/eslint/next` (requires `@next/eslint-plugin-next` to be installed at the same version as `next`)
+- `@grikomsn/style-guide/eslint/playwright-test` (requires [`eslint-plugin-playwright`](https://npm.im/eslint-plugin-playwright) to be installed)
 - `@grikomsn/style-guide/eslint/react`
-- `@grikomsn/style-guide/eslint/tailwindcss` (requires installing [`eslint-plugin-tailwindcss`](https://www.npmjs.com/package/eslint-plugin-tailwindcss))
-- `@grikomsn/style-guide/eslint/typescript` (requires [additional configuration](#configuring-eslint-for-typescript))
+- `@grikomsn/style-guide/eslint/tailwindcss` (requires [`tailwindcss`](https://npm.im/tailwindcss) to be installed)
+- `@grikomsn/style-guide/eslint/typescript` (requires [`typescript`](https://npm.im/typescript) to be installed and [additional configuration](#configuring-eslint-for-typescript))
 
 > You'll need to use `require.resolve` to provide ESLint with absolute paths,
 > due to an issue around ESLint config resolution (see
@@ -106,6 +117,33 @@ module.exports = {
     },
   },
   root: true,
+};
+```
+
+### Configuring custom components for `jsx-a11y`
+
+It's common practice for React apps to have shared components like `Button`,
+which wrap native elements. You can pass this information along to `jsx-a11y`
+via the `components` setting.
+
+The below list is not exhaustive.
+
+```js
+module.exports = {
+  root: true,
+  extends: [require.resolve("@vercel/style-guide/eslint/react")],
+  settings: {
+    "jsx-a11y": {
+      components: {
+        Article: "article",
+        Button: "button",
+        Image: "img",
+        Input: "input",
+        Link: "a",
+        Video: "video",
+      },
+    },
+  },
 };
 ```
 

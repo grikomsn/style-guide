@@ -10,11 +10,13 @@ const config = {
       extends: [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@typescript-eslint/strict",
         "plugin:import/typescript",
         "plugin:prettier/recommended",
         require.resolve("./rules/typescript"),
         require.resolve("./rules/typescript/extension"),
         require.resolve("./rules/typescript/import"),
+        require.resolve("./rules/typescript/strict"),
         require.resolve("./rules/typescript/variables"),
         require.resolve("./rules/tsdoc"),
       ],

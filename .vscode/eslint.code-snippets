@@ -1,0 +1,17 @@
+{
+  "Base ESLint configuration": {
+    "scope": "javascript",
+    "prefix": "!",
+    "body": [
+      "// @ts-check",
+      "",
+      "/** @type {import(\"eslint\").Linter.Config} */",
+      "const config = {",
+      "  $0",
+      "};",
+      "",
+      "module.exports = config;",
+      ""
+    ]
+  }
+}
