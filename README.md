@@ -181,7 +181,7 @@ module.exports = {
     {
       files: ["directory/**/*.[jt]s?(x)"],
       rules: {
-        "my-rule": "off",
+        "my-rule": ["off"],
       },
     },
   ],

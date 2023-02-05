@@ -10,8 +10,8 @@ const config = {
     {
       files: TYPESCRIPT_FILES,
       rules: {
-        "@typescript-eslint/unbound-method": "off",
-        "jest/unbound-method": "error",
+        "@typescript-eslint/unbound-method": ["off"],
+        "jest/unbound-method": ["error"],
       },
     },
   ],

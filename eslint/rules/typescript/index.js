@@ -4,9 +4,9 @@
 const config = {
   rules: {
     "@typescript-eslint/consistent-type-exports": ["warn", { fixMixedExportsWithInlineTypeSpecifier: true }],
-    "@typescript-eslint/consistent-type-imports": "warn",
-    "@typescript-eslint/explicit-function-return-type": "warn",
-    "@typescript-eslint/method-signature-style": "warn",
+    "@typescript-eslint/consistent-type-imports": ["warn"],
+    "@typescript-eslint/explicit-function-return-type": ["off"],
+    "@typescript-eslint/method-signature-style": ["warn"],
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -22,10 +22,10 @@ const config = {
         selector: "interface",
       },
     ],
-    "@typescript-eslint/no-redundant-type-constituents": "warn",
-    "@typescript-eslint/no-unnecessary-qualifier": "warn",
-    "@typescript-eslint/prefer-regexp-exec": "warn",
-    "@typescript-eslint/switch-exhaustiveness-check": "error",
+    "@typescript-eslint/no-redundant-type-constituents": ["warn"],
+    "@typescript-eslint/no-unnecessary-qualifier": ["warn"],
+    "@typescript-eslint/prefer-regexp-exec": ["warn"],
+    "@typescript-eslint/switch-exhaustiveness-check": ["error"],
   },
 };
 

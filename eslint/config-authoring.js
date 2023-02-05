@@ -7,7 +7,7 @@ const config = {
     {
       files: ["eslint/rules/**", "prettier/**"],
       rules: {
-        "sort-keys": "error",
+        "sort-keys": ["error"],
       },
     },
   ],
