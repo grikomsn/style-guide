@@ -3,9 +3,6 @@
 
 const childProcess = require("node:child_process");
 const fs = require("node:fs/promises");
-const util = require("node:util");
-
-const exec = util.promisify(childProcess.exec);
 
 const packageJson = require("../package.json");
 const { readPackageManager } = require("../eslint/utils/package-manager");
@@ -31,12 +28,12 @@ const trimCore = async () => {
   const packageManager = readPackageManager();
   const command = packageManager === "yarn" ? "add" : "install";
 
-  await exec(`${packageManager} ${command}`);
+  const c1 = childProcess.spawnSync(packageManager, [command]);
+  process.stdout.write(c1.stdout.toString());
+  process.stderr.write(c1.stderr.toString());
 
   await fs.copyFile("./README.core.md", "./README.md");
   await fs.unlink("./README.core.md");
-
-  await exec("./publish && git reset --hard HEAD", { shell: true });
 };
 
 void trimCore();
