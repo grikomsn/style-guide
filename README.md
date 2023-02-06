@@ -30,6 +30,8 @@ pnpm install --save-dev @grikomsn/style-guide
 Some of our ESLint configs require peer dependencies. We'll note those
 alongside the available configs in the [ESLint](#eslint) section.
 
+If you're not working with frontend related projects (React, Next.js, TailwindCSS), you can install [`@grikomsn/style-guide-core`](https://npm.im/@grikomsn/style-guide-core) which [does not include packages listed here](./scripts/trim-core.js).
+
 ## Prettier
 
 > Note: Prettier is a peer-dependency of this package, and should be installed
