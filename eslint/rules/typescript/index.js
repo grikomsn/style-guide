@@ -5,19 +5,12 @@ const config = {
   rules: {
     "@typescript-eslint/consistent-type-exports": ["warn", { fixMixedExportsWithInlineTypeSpecifier: true }],
     "@typescript-eslint/consistent-type-imports": ["warn"],
-    "@typescript-eslint/explicit-function-return-type": ["off"],
     "@typescript-eslint/method-signature-style": ["warn"],
     "@typescript-eslint/naming-convention": [
       "error",
+      { format: ["PascalCase"], selector: ["typeLike", "enumMember"] },
       {
-        format: ["PascalCase"],
-        selector: ["typeLike", "enumMember"],
-      },
-      {
-        custom: {
-          match: false,
-          regex: "^I[A-Z]|^(Interface|Props|State)$",
-        },
+        custom: { match: false, regex: "^I[A-Z]|^(Interface|Props|State)$" },
         format: ["PascalCase"],
         selector: "interface",
       },

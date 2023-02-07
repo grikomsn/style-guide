@@ -17,7 +17,6 @@ const config = {
         require.resolve("./rules/typescript/extension"),
         require.resolve("./rules/typescript/import"),
         require.resolve("./rules/typescript/strict"),
-        require.resolve("./rules/typescript/variables"),
         require.resolve("./rules/tsdoc"),
       ],
     },
