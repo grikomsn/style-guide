@@ -1,6 +1,6 @@
 // @ts-check
 
-const { JAVASCRIPT_FILES } = require("./constants");
+const { JAVASCRIPT_FILES, NEXT_CONFIG_FILES } = require("./constants");
 const { requirePackage } = require("./utils/package-manager");
 
 requirePackage("next", "@next/eslint-plugin-next");
@@ -23,6 +23,13 @@ const config = {
     {
       files: JAVASCRIPT_FILES,
       parserOptions: { babelOptions },
+    },
+    {
+      files: NEXT_CONFIG_FILES,
+      rules: {
+        "import/no-default-export": ["off"],
+        "import/prefer-default-export": ["error"],
+      },
     },
   ],
 };
