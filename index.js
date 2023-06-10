@@ -1,5 +1,7 @@
 // @ts-check
 
+const merge = require("lodash.merge");
+
 /**
  * @typedef EslintConfigName
  * @type {"base"|"browser-node"|"browser"|"config-authoring"|"jest"|"next"|"node"|"playwright-test"|"react"|"tailwindcss"|"tsup"|"typescript"}
@@ -11,7 +13,7 @@
  */
 const extendEslint = (configNames = [], extraConfig = {}) => {
   /** @type {import("eslint").Linter.Config} */
-  const config = { ...extraConfig };
+  const config = {};
 
   /** @type {import("eslint").Linter.Config["extends"]} */
   const newExtends = [];
@@ -42,22 +44,18 @@ const extendEslint = (configNames = [], extraConfig = {}) => {
     const { getTsconfigPath } = require("./eslint/utils/tsconfig");
 
     config.parserOptions = {
-      ...config.parserOptions,
       project: getTsconfigPath(),
     };
     config.settings = {
-      ...config.settings,
       "import/resolver": {
-        ...config.settings?.["import/resolver"],
         typescript: {
-          ...config.settings?.["import/resolver"]?.typescript,
           project: getTsconfigPath(),
         },
       },
     };
   }
 
-  return config;
+  return merge(extraConfig, config);
 };
 
 /**
@@ -65,7 +63,6 @@ const extendEslint = (configNames = [], extraConfig = {}) => {
  * @returns {import("prettier").Config}
  */
 const extendPrettier = (config = {}) => {
-  const merge = require("lodash.merge");
   return merge(require("./prettier"), config);
 };
 
