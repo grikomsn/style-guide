@@ -5,9 +5,10 @@ const config = {
   rules: {
     "import/extensions": ["off"],
     "import/first": ["error"],
+    "import/namespace": ["off"],
     "import/newline-after-import": ["warn"],
     "import/no-absolute-path": ["error"],
-    "import/no-cycle": ["error"],
+    "import/no-cycle": ["off"],
     "import/no-default-export": ["error"],
     "import/no-mutable-exports": ["error"],
     "import/no-relative-packages": ["warn"],
