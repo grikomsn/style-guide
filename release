@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# publish package as is
+pnpm publish
+
+# publish package on github packages
+pnpm mod:github &&
+  pnpm publish --no-git-checks &&
+  git reset HEAD --hard
+
+# publish core package
+pnpm mod:core &&
+  pnpm publish --no-git-checks
+
+# publish core package on github packages
+pnpm mod:github &&
+  pnpm publish --no-git-checks &&
+  git reset HEAD --hard

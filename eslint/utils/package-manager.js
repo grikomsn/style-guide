@@ -18,12 +18,10 @@ const requirePackage = (configName, packageName) => {
     const packageManager = readPackageManager();
     const command = packageManager === "yarn" ? "add" : "install";
 
-    /* eslint-disable no-console */
     console.error(`The \`${configName}\` config requires an optional peer dependency, which has not been installed.`);
     console.error();
     console.error("To install it, run:");
     console.error(`- ${packageManager} ${command} ${packageName}@${pkgJson.peerDependencies[packageName]}`);
-    /* eslint-enable no-console */
 
     process.exit(1);
   }

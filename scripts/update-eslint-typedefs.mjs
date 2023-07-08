@@ -30,7 +30,7 @@ const updateEslintTypedefs = async () => {
     retainFunctionParens: true,
   });
   const { code } = generator.generate();
-  await fs.writeFile(scriptSrc, prettier.format(code, { parser: "babel" }), { encoding: "utf-8" });
+  await fs.writeFile(scriptSrc, await prettier.format(code, { parser: "babel" }), { encoding: "utf-8" });
 
   const tsc = ts.createProgram([scriptSrc], {
     allowJs: true,

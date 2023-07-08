@@ -4,7 +4,7 @@ const merge = require("lodash.merge");
 
 /**
  * @typedef EslintConfigName
- * @type {"base"|"browser-node"|"browser"|"config-authoring"|"jest"|"next"|"node"|"playwright-test"|"react"|"tailwindcss"|"tsup"|"typescript"}
+ * @type {"base"|"browser-node"|"browser"|"config-authoring"|"config-files"|"jest"|"next"|"node"|"playwright-test"|"react"|"tailwindcss"|"tsup"|"typescript"}
  */
 
 /**

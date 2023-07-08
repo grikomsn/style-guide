@@ -16,15 +16,17 @@ The following configs are available, and are designed to be used together.
 
 ## Installing
 
+Starting with v3.0.0, using this package requires installing its direct peer dependencies: `eslint`, `prettier`, and `typescript`.
+
 ```sh
 # using npm
-npm install --save-dev @grikomsn/style-guide
+npm install --save-dev @grikomsn/style-guide eslint prettier typescript
 
 # using yarn
-yarn add --dev @grikomsn/style-guide
+yarn add --dev @grikomsn/style-guide eslint prettier typescript
 
 # using pnpm
-pnpm install --save-dev @grikomsn/style-guide
+pnpm install --save-dev @grikomsn/style-guide eslint prettier typescript
 ```
 
 Some of our ESLint configs require peer dependencies. We'll note those

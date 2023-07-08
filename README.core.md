@@ -6,19 +6,19 @@
 
 ESLint and Prettier style guide for various personal projects, which includes configs for popular linting and styling tools. Heavily based on [Vercel's style guide](https://github.com/vercel/style-guide).
 
-This is a trimmed down version of [@grikomsn/style-guide](https://github.com/grikomsn/style-guide) which [does not include packages listed here](./scripts/trim-core.js).
+This is a trimmed down version of [@grikomsn/style-guide](https://github.com/grikomsn/style-guide) which [does not include packages listed here](./scripts/prepare-core.js).
 
 ## Installing
 
 ```sh
 # using npm
-npm install --save-dev @grikomsn/style-guide-core
+npm install --save-dev @grikomsn/style-guide-core eslint prettier typescript
 
 # using yarn
-yarn add --dev @grikomsn/style-guide-core
+yarn add --dev @grikomsn/style-guide-core eslint prettier typescript
 
 # using pnpm
-pnpm install --save-dev @grikomsn/style-guide-core
+pnpm install --save-dev @grikomsn/style-guide-core eslint prettier typescript
 ```
 
 ## Usage
