@@ -14,7 +14,7 @@ const getPrettierPlugin = () => {
     /** @type {{ version: string }} */
     const { version } = require(prettierPackageJsonPath);
 
-    if (version.startsWith("3")) return "plugin:prettier-alpha/recommended";
+    if (version.startsWith("3")) return "plugin:prettier5/recommended";
     return "plugin:prettier/recommended";
   } catch (error) {
     return "plugin:prettier/recommended";
