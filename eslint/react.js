@@ -1,5 +1,7 @@
 // @ts-check
 
+const { getPrettierPlugin } = require("./utils/prettier");
+
 /** @type {import("eslint").Linter.Config} */
 const config = {
   extends: [
@@ -7,7 +9,7 @@ const config = {
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:import/react",
-    "plugin:prettier/recommended",
+    getPrettierPlugin(),
     require.resolve("./rules/react"),
     require.resolve("./rules/jsx-a11y"),
   ],
