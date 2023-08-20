@@ -1,7 +1,6 @@
 // @ts-check
 
 const { TYPESCRIPT_FILES } = require("./constants");
-const { getPrettierPlugin } = require("./utils/prettier");
 
 /** @type {import("eslint").Linter.Config} */
 const config = {
@@ -9,11 +8,11 @@ const config = {
     {
       files: TYPESCRIPT_FILES,
       extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:@typescript-eslint/strict",
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:@typescript-eslint/strict-type-checked",
+        "plugin:@typescript-eslint/stylistic-type-checked",
         "plugin:import/typescript",
-        getPrettierPlugin(),
+        "plugin:prettier/recommended",
         require.resolve("./rules/typescript"),
         require.resolve("./rules/typescript/extension"),
         require.resolve("./rules/typescript/import"),

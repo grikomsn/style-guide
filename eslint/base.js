@@ -1,7 +1,6 @@
 // @ts-check
 
 const { JAVASCRIPT_FILES } = require("./constants");
-const { getPrettierPlugin } = require("./utils/prettier");
 
 // https://github.com/eslint/eslint/issues/3458
 require("@rushstack/eslint-patch/modern-module-resolution");
@@ -15,7 +14,7 @@ const config = {
     "eslint:recommended",
     "plugin:import/recommended",
     "plugin:eslint-comments/recommended",
-    getPrettierPlugin(),
+    "plugin:prettier/recommended",
     require.resolve("./rules/best-practice"),
     require.resolve("./rules/es6"),
     require.resolve("./rules/import"),
