@@ -135,7 +135,7 @@ The below list is not exhaustive.
 ```js
 module.exports = {
   root: true,
-  extends: [require.resolve("@vercel/style-guide/eslint/react")],
+  extends: [require.resolve("@grikomsn/style-guide/eslint/react")],
   settings: {
     "jsx-a11y": {
       components: {
