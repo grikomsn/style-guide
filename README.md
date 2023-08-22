@@ -101,7 +101,7 @@ information, you'll need to provide the path to your `tsconfig.json`.
 For more information, see: https://typescript-eslint.io/docs/linting/type-linting
 
 ```js
-const { getTsconfigPath } = require("@grikomsn/style-guide/eslint/helpers");
+const { getTsconfigPath } = require("@grikomsn/style-guide/eslint/utils/tsconfig");
 
 const tsconfigPath = getTsconfigPath();
 
